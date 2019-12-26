@@ -1,0 +1,220 @@
+html { 
+  font-size: 1vw;
+  font-family: 'Indie Flower', cursive;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow-x:hidden;
+}
+
+body {
+	background-image: url("../images/banner.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+
+	.animation-center {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.fa-sun {
+			color: yellow;
+			margin-top: 0.5rem;
+			position: relative;
+			right: 25vw;
+			display: inline-block;
+		}
+
+		.fa-cloud {
+			color: skyblue;
+			position: relative;
+			margin-top: 2rem;
+		}
+
+		.fa-5x {
+			right: 24vw;
+			animation-duration: 10s;
+			animation-name: slidein1;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			x-transition: all 10s ease-in-out;
+		}
+
+		.fa-7x {
+			left: 0;
+			animation-duration: 12s;
+			animation-name: slidein2;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			x-transition: all 12s ease-in-out;
+		}
+
+		.flower {
+			margin-right: 5vw;
+			animation-duration: 2s;
+			animation-name: swing;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			x-transition: all 2s ease-in-out;
+
+			.fa-seedling {
+				color: green;
+			}
+
+			.fa-fan {
+				position: relative;
+				top: 3rem;
+				color: orange;
+			}
+		}
+
+		.fa-rainbow {
+			margin-left: 5vw;
+			color: rgb(236,100,75);
+    		animation: wheelHueColor 20s infinite;
+		}
+
+		.rotate {
+			animation: rotation 4s infinite linear;
+		}
+
+		@keyframes rotation {
+		  from {
+		    transform: rotate(0deg);
+		  }
+		  to {
+		    transform: rotate(359deg);
+		  }
+		}
+
+		@keyframes slidein1 {
+		  from {
+		    right: 24vw;
+		  }
+
+		  to {
+		    right: 0;
+		  }
+		}
+
+		@keyframes slidein2 {
+		  from {
+		    left: 0;
+		  }
+
+		  to {
+		    left: 24vw;
+		  }
+		}
+
+		@keyframes swing {
+		  from {
+		    transform: rotate(-30deg);
+		  }
+		  to {
+		    transform: rotate(30deg);
+		  }
+		}
+
+		@keyframes wheelHueColor {
+		    0%		 { color: rgb(236,100,75); }
+		    10%      { color: rgb(219,10,91); }
+		    20%      { color: rgb(174,168,211); }
+		    30%      { color: rgb(89,171,227); }
+		    40%      { color: rgb(37,116,169); }
+		    50%      { color: rgb(3,201,169); }
+		    60%      { color: rgb(22,160,133); }
+		    70%      { color: rgb(233,212,96); }
+		    80%      { color: rgb(243,156,18); }
+		    90%      { color: rgb(236,240,241); }
+		}
+	}
+
+	.animation-left {
+		list-style: none;
+		margin-left: -1%;
+		color: darkgreen;
+
+		li {
+			height: 12rem;
+		}
+
+		.slide {
+			animation-duration: 10s;
+			animation-name: slidein3;
+			animation-iteration-count: infinite;
+			x-transition: all 10s ease-in-out;
+		}
+
+		@keyframes slidein3 {
+		  0%   { 
+		  	transform: translate(-1vw, 0) rotate(0deg);
+		  	padding-bottom: 12rem;
+		  	padding-top: 0;
+		  }
+		  30% { 
+		  	transform: translate(30vw, 0) rotate(360deg); 
+		  	padding-bottom: 0;
+		  	padding-top: 12rem;
+		  }
+		  100% { 
+		  	transform: translate(101vw, 0) rotate(720deg); 
+		  	padding-bottom: 6rem;
+		  	padding-top: 6rem;
+		  }
+		}
+	}
+
+	header h1 {
+		text-align: center;
+		font-family: 'Indie Flower', cursive;
+		padding: 0;
+		padding-bottom: 0;
+		font-size: 6vw;
+	}
+
+	.scallop-up{
+	  height:26px;
+	  width:100%;
+	  background: -webkit-gradient(radial, 50% 100%, 10, 50% 100%, 40, from(#DAA9AE), color-stop(0.49, #DAA9AE), color-stop(0.51, #fff), to(white));
+	  -webkit-background-size: 49px 100%;
+	}
+
+	.container-fluid {
+		margin: 5%;
+		width: 90%;
+	}
+
+	.row {
+	  margin: 0;
+	  margin-top: 2rem;
+	  display: flex;
+	  flex-wrap: wrap;
+
+	  div[class^="col"] {
+		  width: 26vw;
+		  /*height: 40vh;*/
+		  /*background-color: gray;*/
+		  /*margin: 1vw;*/
+		  padding: 2vw;
+		  /*background-image: url("../images/frame.jpg");*/
+		  background-size: cover;
+		  display: flex;
+  		  flex-direction: column;
+		}
+
+		.pic {
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5%;
+		}
+	}
+
+	.pic {
+		width: 100%;
+		height: 100%;
+	}
+}

@@ -1,0 +1,165 @@
+html {
+  font-size: 1vw;
+  font-family: 'Indie Flower', cursive;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden; }
+
+body {
+  background-image: url("../images/banner.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: 0; }
+  body .animation-center {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    body .animation-center .fa-sun {
+      color: yellow;
+      margin-top: 0.5rem;
+      position: relative;
+      right: 25vw;
+      display: inline-block; }
+    body .animation-center .fa-cloud {
+      color: skyblue;
+      position: relative;
+      margin-top: 2rem; }
+    body .animation-center .fa-5x {
+      right: 24vw;
+      animation-duration: 10s;
+      animation-name: slidein1;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      x-transition: all 10s ease-in-out; }
+    body .animation-center .fa-7x {
+      left: 0;
+      animation-duration: 12s;
+      animation-name: slidein2;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      x-transition: all 12s ease-in-out; }
+    body .animation-center .flower {
+      margin-right: 5vw;
+      animation-duration: 2s;
+      animation-name: swing;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      x-transition: all 2s ease-in-out; }
+      body .animation-center .flower .fa-seedling {
+        color: green; }
+      body .animation-center .flower .fa-fan {
+        position: relative;
+        top: 3rem;
+        color: orange; }
+    body .animation-center .fa-rainbow {
+      margin-left: 5vw;
+      color: #ec644b;
+      animation: wheelHueColor 20s infinite; }
+    body .animation-center .rotate {
+      animation: rotation 4s infinite linear; }
+@keyframes rotation {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
+@keyframes slidein1 {
+  from {
+    right: 24vw; }
+  to {
+    right: 0; } }
+@keyframes slidein2 {
+  from {
+    left: 0; }
+  to {
+    left: 24vw; } }
+@keyframes swing {
+  from {
+    transform: rotate(-30deg); }
+  to {
+    transform: rotate(30deg); } }
+@keyframes wheelHueColor {
+  0% {
+    color: #ec644b; }
+  10% {
+    color: #db0a5b; }
+  20% {
+    color: #aea8d3; }
+  30% {
+    color: #59abe3; }
+  40% {
+    color: #2574a9; }
+  50% {
+    color: #03c9a9; }
+  60% {
+    color: #16a085; }
+  70% {
+    color: #e9d460; }
+  80% {
+    color: #f39c12; }
+  90% {
+    color: #ecf0f1; } }
+  body .animation-left {
+    list-style: none;
+    margin-left: -1%;
+    color: darkgreen; }
+    body .animation-left li {
+      height: 12rem; }
+    body .animation-left .slide {
+      animation-duration: 10s;
+      animation-name: slidein3;
+      animation-iteration-count: infinite;
+      x-transition: all 10s ease-in-out; }
+@keyframes slidein3 {
+  0% {
+    transform: translate(-1vw, 0) rotate(0deg);
+    padding-bottom: 12rem;
+    padding-top: 0; }
+  30% {
+    transform: translate(30vw, 0) rotate(360deg);
+    padding-bottom: 0;
+    padding-top: 12rem; }
+  100% {
+    transform: translate(101vw, 0) rotate(720deg);
+    padding-bottom: 6rem;
+    padding-top: 6rem; } }
+  body header h1 {
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    padding: 0;
+    padding-bottom: 0;
+    font-size: 6vw; }
+  body .scallop-up {
+    height: 26px;
+    width: 100%;
+    background: -webkit-gradient(radial, 50% 100%, 10, 50% 100%, 40, from(#DAA9AE), color-stop(0.49, #DAA9AE), color-stop(0.51, #fff), to(white));
+    -webkit-background-size: 49px 100%; }
+  body .container-fluid {
+    margin: 5%;
+    width: 90%; }
+  body .row {
+    margin: 0;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap; }
+    body .row div[class^="col"] {
+      width: 26vw;
+      /*height: 40vh;*/
+      /*background-color: gray;*/
+      /*margin: 1vw;*/
+      padding: 2vw;
+      /*background-image: url("../images/frame.jpg");*/
+      background-size: cover;
+      display: flex;
+      flex-direction: column; }
+    body .row .pic {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border-radius: 5%; }
+  body .pic {
+    width: 100%;
+    height: 100%; }
+
+/*# sourceMappingURL=index.css.map */
