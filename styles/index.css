@@ -17,7 +17,12 @@ body {
     list-style: none;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    /*rotation keyframes*/
+    /*slidein1 keyframes*/
+    /*slidein2 keyframes*/
+    /*swing keyframes*/
+    /*wheelHueColor keyframes*/ }
     body .animation-center .fa-sun {
       color: yellow;
       margin-top: 0.5rem;
@@ -34,6 +39,10 @@ body {
       animation-name: slidein1;
       animation-iteration-count: infinite;
       animation-direction: alternate;
+      -webkit-animation-duration: 10s;
+      -webkit-animation-name: slidein1;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
       x-transition: all 10s ease-in-out; }
     body .animation-center .fa-7x {
       left: 0;
@@ -41,14 +50,24 @@ body {
       animation-name: slidein2;
       animation-iteration-count: infinite;
       animation-direction: alternate;
-      x-transition: all 12s ease-in-out; }
+      x-transition: all 12s ease-in-out;
+      -webkit-animation-duration: 12s;
+      -webkit-nimation-name: slidein2;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+      -webkit-x-transition: all 12s ease-in-out; }
     body .animation-center .flower {
       margin-right: 5vw;
       animation-duration: 2s;
       animation-name: swing;
       animation-iteration-count: infinite;
       animation-direction: alternate;
-      x-transition: all 2s ease-in-out; }
+      x-transition: all 2s ease-in-out;
+      -webkit-animation-duration: 2s;
+      -webkit-animation-name: swing;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+      -webkit-x-transition: all 2s ease-in-out; }
       body .animation-center .flower .fa-seedling {
         color: green; }
       body .animation-center .flower .fa-fan {
@@ -58,10 +77,27 @@ body {
     body .animation-center .fa-rainbow {
       margin-left: 5vw;
       color: #ec644b;
-      animation: wheelHueColor 20s infinite; }
+      animation: wheelHueColor 20s infinite;
+      -webkit-animation: wheelHueColor 20s infinite; }
     body .animation-center .rotate {
-      animation: rotation 4s infinite linear; }
+      animation: rotation 4s infinite linear;
+      -webkit-animation: rotation 4s infinite linear; }
 @keyframes rotation {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
+@-webkit-keyframes rotation {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
+@-moz-keyframes rotation {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
+@-o-keyframes rotation {
   from {
     transform: rotate(0deg); }
   to {
@@ -71,12 +107,57 @@ body {
     right: 24vw; }
   to {
     right: 0; } }
+@-webkit-keyframes slidein1 {
+  from {
+    right: 24vw; }
+  to {
+    right: 0; } }
+@-moz-keyframes slidein1 {
+  from {
+    right: 24vw; }
+  to {
+    right: 0; } }
+@-o-keyframes slidein1 {
+  from {
+    right: 24vw; }
+  to {
+    right: 0; } }
 @keyframes slidein2 {
   from {
     left: 0; }
   to {
     left: 24vw; } }
+@-webkit-keyframes slidein2 {
+  from {
+    left: 0; }
+  to {
+    left: 24vw; } }
+@-moz-keyframes slidein2 {
+  from {
+    left: 0; }
+  to {
+    left: 24vw; } }
+@-o-keyframes slidein2 {
+  from {
+    left: 0; }
+  to {
+    left: 24vw; } }
 @keyframes swing {
+  from {
+    transform: rotate(-30deg); }
+  to {
+    transform: rotate(30deg); } }
+@-webkit-keyframes swing {
+  from {
+    transform: rotate(-30deg); }
+  to {
+    transform: rotate(30deg); } }
+@-moz-keyframes swing {
+  from {
+    transform: rotate(-30deg); }
+  to {
+    transform: rotate(30deg); } }
+@-o-keyframes swing {
   from {
     transform: rotate(-30deg); }
   to {
@@ -102,18 +183,125 @@ body {
     color: #f39c12; }
   90% {
     color: #ecf0f1; } }
+@-webkit-keyframes wheelHueColor {
+  0% {
+    color: #ec644b; }
+  10% {
+    color: #db0a5b; }
+  20% {
+    color: #aea8d3; }
+  30% {
+    color: #59abe3; }
+  40% {
+    color: #2574a9; }
+  50% {
+    color: #03c9a9; }
+  60% {
+    color: #16a085; }
+  70% {
+    color: #e9d460; }
+  80% {
+    color: #f39c12; }
+  90% {
+    color: #ecf0f1; } }
+@-moz-keyframes wheelHueColor {
+  0% {
+    color: #ec644b; }
+  10% {
+    color: #db0a5b; }
+  20% {
+    color: #aea8d3; }
+  30% {
+    color: #59abe3; }
+  40% {
+    color: #2574a9; }
+  50% {
+    color: #03c9a9; }
+  60% {
+    color: #16a085; }
+  70% {
+    color: #e9d460; }
+  80% {
+    color: #f39c12; }
+  90% {
+    color: #ecf0f1; } }
+@-o-keyframes wheelHueColor {
+  0% {
+    color: #ec644b; }
+  10% {
+    color: #db0a5b; }
+  20% {
+    color: #aea8d3; }
+  30% {
+    color: #59abe3; }
+  40% {
+    color: #2574a9; }
+  50% {
+    color: #03c9a9; }
+  60% {
+    color: #16a085; }
+  70% {
+    color: #e9d460; }
+  80% {
+    color: #f39c12; }
+  90% {
+    color: #ecf0f1; } }
   body .animation-left {
     list-style: none;
     margin-left: -1%;
-    color: darkgreen; }
+    color: darkgreen;
+    /*slidein3 keyframes*/ }
     body .animation-left li {
       height: 12rem; }
     body .animation-left .slide {
       animation-duration: 10s;
       animation-name: slidein3;
       animation-iteration-count: infinite;
-      x-transition: all 10s ease-in-out; }
+      x-transition: all 10s ease-in-out;
+      -webkit-animation-duration: 10s;
+      -webkit-animation-name: slidein3;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-x-transition: all 10s ease-in-out; }
 @keyframes slidein3 {
+  0% {
+    transform: translate(-1vw, 0) rotate(0deg);
+    padding-bottom: 12rem;
+    padding-top: 0; }
+  30% {
+    transform: translate(30vw, 0) rotate(360deg);
+    padding-bottom: 0;
+    padding-top: 12rem; }
+  100% {
+    transform: translate(101vw, 0) rotate(720deg);
+    padding-bottom: 6rem;
+    padding-top: 6rem; } }
+@-webkit-keyframes slidein3 {
+  0% {
+    transform: translate(-1vw, 0) rotate(0deg);
+    padding-bottom: 12rem;
+    padding-top: 0; }
+  30% {
+    transform: translate(30vw, 0) rotate(360deg);
+    padding-bottom: 0;
+    padding-top: 12rem; }
+  100% {
+    transform: translate(101vw, 0) rotate(720deg);
+    padding-bottom: 6rem;
+    padding-top: 6rem; } }
+@-moz-keyframes slidein3 {
+  0% {
+    transform: translate(-1vw, 0) rotate(0deg);
+    padding-bottom: 12rem;
+    padding-top: 0; }
+  30% {
+    transform: translate(30vw, 0) rotate(360deg);
+    padding-bottom: 0;
+    padding-top: 12rem; }
+  100% {
+    transform: translate(101vw, 0) rotate(720deg);
+    padding-bottom: 6rem;
+    padding-top: 6rem; } }
+@-o-keyframes slidein3 {
   0% {
     transform: translate(-1vw, 0) rotate(0deg);
     padding-bottom: 12rem;

@@ -41,6 +41,10 @@ body {
 			animation-name: slidein1;
 			animation-iteration-count: infinite;
 			animation-direction: alternate;
+			-webkit-animation-duration: 10s;
+			-webkit-animation-name: slidein1;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-direction: alternate;
 			x-transition: all 10s ease-in-out;
 		}
 
@@ -51,6 +55,11 @@ body {
 			animation-iteration-count: infinite;
 			animation-direction: alternate;
 			x-transition: all 12s ease-in-out;
+			-webkit-animation-duration: 12s;
+			-webkit-nimation-name: slidein2;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-direction: alternate;
+			-webkit-x-transition: all 12s ease-in-out;
 		}
 
 		.flower {
@@ -60,6 +69,11 @@ body {
 			animation-iteration-count: infinite;
 			animation-direction: alternate;
 			x-transition: all 2s ease-in-out;
+			-webkit-animation-duration: 2s;
+			-webkit-animation-name: swing;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-direction: alternate;
+			-webkit-x-transition: all 2s ease-in-out;
 
 			.fa-seedling {
 				color: green;
@@ -76,11 +90,15 @@ body {
 			margin-left: 5vw;
 			color: rgb(236,100,75);
     		animation: wheelHueColor 20s infinite;
+    		-webkit-animation: wheelHueColor 20s infinite;
 		}
 
 		.rotate {
 			animation: rotation 4s infinite linear;
+			-webkit-animation: rotation 4s infinite linear;
 		}
+
+		/*rotation keyframes*/
 
 		@keyframes rotation {
 		  from {
@@ -90,6 +108,35 @@ body {
 		    transform: rotate(359deg);
 		  }
 		}
+
+		@-webkit-keyframes rotation {
+		  from {
+		    transform: rotate(0deg);
+		  }
+		  to {
+		    transform: rotate(359deg);
+		  }
+		}
+
+		@-moz-keyframes rotation {
+		  from {
+		    transform: rotate(0deg);
+		  }
+		  to {
+		    transform: rotate(359deg);
+		  }
+		}
+
+		@-o-keyframes rotation {
+		  from {
+		    transform: rotate(0deg);
+		  }
+		  to {
+		    transform: rotate(359deg);
+		  }
+		}
+
+		/*slidein1 keyframes*/
 
 		@keyframes slidein1 {
 		  from {
@@ -101,6 +148,38 @@ body {
 		  }
 		}
 
+		@-webkit-keyframes slidein1 {
+		  from {
+		    right: 24vw;
+		  }
+
+		  to {
+		    right: 0;
+		  }
+		}
+
+		@-moz-keyframes slidein1 {
+		  from {
+		    right: 24vw;
+		  }
+
+		  to {
+		    right: 0;
+		  }
+		}
+
+		@-o-keyframes slidein1 {
+		  from {
+		    right: 24vw;
+		  }
+
+		  to {
+		    right: 0;
+		  }
+		}
+
+		/*slidein2 keyframes*/
+
 		@keyframes slidein2 {
 		  from {
 		    left: 0;
@@ -111,6 +190,38 @@ body {
 		  }
 		}
 
+		@-webkit-keyframes slidein2 {
+		  from {
+		    left: 0;
+		  }
+
+		  to {
+		    left: 24vw;
+		  }
+		}
+
+		@-moz-keyframes slidein2 {
+		  from {
+		    left: 0;
+		  }
+
+		  to {
+		    left: 24vw;
+		  }
+		}
+
+		@-o-keyframes slidein2 {
+		  from {
+		    left: 0;
+		  }
+
+		  to {
+		    left: 24vw;
+		  }
+		}
+
+		/*swing keyframes*/
+
 		@keyframes swing {
 		  from {
 		    transform: rotate(-30deg);
@@ -120,7 +231,75 @@ body {
 		  }
 		}
 
+		@-webkit-keyframes swing {
+		  from {
+		    transform: rotate(-30deg);
+		  }
+		  to {
+		    transform: rotate(30deg);
+		  }
+		}
+
+		@-moz-keyframes swing {
+		  from {
+		    transform: rotate(-30deg);
+		  }
+		  to {
+		    transform: rotate(30deg);
+		  }
+		}
+
+		@-o-keyframes swing {
+		  from {
+		    transform: rotate(-30deg);
+		  }
+		  to {
+		    transform: rotate(30deg);
+		  }
+		}
+
+		/*wheelHueColor keyframes*/
+
 		@keyframes wheelHueColor {
+		    0%		 { color: rgb(236,100,75); }
+		    10%      { color: rgb(219,10,91); }
+		    20%      { color: rgb(174,168,211); }
+		    30%      { color: rgb(89,171,227); }
+		    40%      { color: rgb(37,116,169); }
+		    50%      { color: rgb(3,201,169); }
+		    60%      { color: rgb(22,160,133); }
+		    70%      { color: rgb(233,212,96); }
+		    80%      { color: rgb(243,156,18); }
+		    90%      { color: rgb(236,240,241); }
+		}
+
+		@-webkit-keyframes wheelHueColor {
+		    0%		 { color: rgb(236,100,75); }
+		    10%      { color: rgb(219,10,91); }
+		    20%      { color: rgb(174,168,211); }
+		    30%      { color: rgb(89,171,227); }
+		    40%      { color: rgb(37,116,169); }
+		    50%      { color: rgb(3,201,169); }
+		    60%      { color: rgb(22,160,133); }
+		    70%      { color: rgb(233,212,96); }
+		    80%      { color: rgb(243,156,18); }
+		    90%      { color: rgb(236,240,241); }
+		}
+
+		@-moz-keyframes wheelHueColor {
+		    0%		 { color: rgb(236,100,75); }
+		    10%      { color: rgb(219,10,91); }
+		    20%      { color: rgb(174,168,211); }
+		    30%      { color: rgb(89,171,227); }
+		    40%      { color: rgb(37,116,169); }
+		    50%      { color: rgb(3,201,169); }
+		    60%      { color: rgb(22,160,133); }
+		    70%      { color: rgb(233,212,96); }
+		    80%      { color: rgb(243,156,18); }
+		    90%      { color: rgb(236,240,241); }
+		}
+
+		@-o-keyframes wheelHueColor {
 		    0%		 { color: rgb(236,100,75); }
 		    10%      { color: rgb(219,10,91); }
 		    20%      { color: rgb(174,168,211); }
@@ -148,9 +327,69 @@ body {
 			animation-name: slidein3;
 			animation-iteration-count: infinite;
 			x-transition: all 10s ease-in-out;
+			-webkit-animation-duration: 10s;
+			-webkit-animation-name: slidein3;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-x-transition: all 10s ease-in-out;
 		}
 
+		/*slidein3 keyframes*/
+
 		@keyframes slidein3 {
+		  0%   { 
+		  	transform: translate(-1vw, 0) rotate(0deg);
+		  	padding-bottom: 12rem;
+		  	padding-top: 0;
+		  }
+		  30% { 
+		  	transform: translate(30vw, 0) rotate(360deg); 
+		  	padding-bottom: 0;
+		  	padding-top: 12rem;
+		  }
+		  100% { 
+		  	transform: translate(101vw, 0) rotate(720deg); 
+		  	padding-bottom: 6rem;
+		  	padding-top: 6rem;
+		  }
+		}
+
+		@-webkit-keyframes slidein3 {
+		  0%   { 
+		  	transform: translate(-1vw, 0) rotate(0deg);
+		  	padding-bottom: 12rem;
+		  	padding-top: 0;
+		  }
+		  30% { 
+		  	transform: translate(30vw, 0) rotate(360deg); 
+		  	padding-bottom: 0;
+		  	padding-top: 12rem;
+		  }
+		  100% { 
+		  	transform: translate(101vw, 0) rotate(720deg); 
+		  	padding-bottom: 6rem;
+		  	padding-top: 6rem;
+		  }
+		}
+
+		@-moz-keyframes slidein3 {
+		  0%   { 
+		  	transform: translate(-1vw, 0) rotate(0deg);
+		  	padding-bottom: 12rem;
+		  	padding-top: 0;
+		  }
+		  30% { 
+		  	transform: translate(30vw, 0) rotate(360deg); 
+		  	padding-bottom: 0;
+		  	padding-top: 12rem;
+		  }
+		  100% { 
+		  	transform: translate(101vw, 0) rotate(720deg); 
+		  	padding-bottom: 6rem;
+		  	padding-top: 6rem;
+		  }
+		}
+
+		@-o-keyframes slidein3 {
 		  0%   { 
 		  	transform: translate(-1vw, 0) rotate(0deg);
 		  	padding-bottom: 12rem;
